@@ -1,0 +1,27 @@
+body {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#searchForm {
+  padding: 25px;
+  margin: auto;
+  border: 3px blue solid;
+  border-radius: 20px;
+  background-color: beige;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+}
+
+#radioGroup {
+  padding: 15px;
+}
+
+#submit2 {
+  border: blue 2px solid;
+  border-radius: 10px;
+}

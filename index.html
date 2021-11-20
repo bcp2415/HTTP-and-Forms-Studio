@@ -30,18 +30,24 @@
       submit.addEventListener("submit", setSearchEngine);
     });
   </script>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <form id="searchForm">
     <input type="text" name="q" id="searchText" />
-    <label><input type="radio" name="engine" value="google" />Google</label>
-    <label
-      ><input type="radio" name="engine" value="duckDuckGo" />DuckDuckGo</label
-    >
-    <label><input type="radio" name="engine" value="bing" />Bing</label>
-    <label><input type="radio" name="engine" value="ask" />Ask</label>
-
+    <div id="radioGroup">
+      <label><input type="radio" name="engine" value="google" />Google</label>
+      <label
+        ><input
+          type="radio"
+          name="engine"
+          value="duckDuckGo"
+        />DuckDuckGo</label
+      >
+      <label><input type="radio" name="engine" value="bing" />Bing</label>
+      <label><input type="radio" name="engine" value="ask" />Ask</label>
+    </div>
     <button type="submit" id="submit2">Go!</button>
   </form>
 </body>
