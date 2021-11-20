@@ -5,23 +5,22 @@
   <script>
     function setSearchEngine() {
       const searchText = document.getElementById("searchText");
+      const actions = {
+        google: "https://www.google.com/search",
+        duckDuckGo: "https://duckduckgo.com/",
+        bing: "https://www.bing.com/search",
+        ask: "https://www.ask.com/web",
+      };
+      const engineChoice = document.querySelector("input[name=engine]:checked");
+      const formElement = document.getElementById("searchForm");
       if (searchText.value.trim() === "") {
-        alert(
-          "Please enter a search term and choose an engine to search with."
-        );
+        alert("Please enter a search term.");
+        event.preventDefault();
+      } else if (engineChoice === null) {
+        window.alert("Please select a search engine.");
         event.preventDefault();
       } else {
-        const actions = {
-          google: "https://www.google.com/search",
-          duckDuckGo: "https://duckduckgo.com/",
-          bing: "https://www.bing.com/search",
-          ask: "https://www.ask.com/web",
-        };
-        const engineChoice = document.querySelector(
-          "input[name=engine]:checked"
-        );
         const formAction = actions[engineChoice.value];
-        const formElement = document.getElementById("searchForm");
         formElement.setAttribute("action", formAction);
       }
     }
